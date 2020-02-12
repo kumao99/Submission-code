@@ -13,8 +13,8 @@ class Message {
 
     struct Data {
         var senderId: String
-//        var name: String
         var message: String
+//        var userName: String
     }
     
 }

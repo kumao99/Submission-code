@@ -20,16 +20,23 @@ class Chat: UIViewController,UITextFieldDelegate,UITableViewDelegate,UITableView
     private var messages: [Message.Data] = []
     private var messageListener: ListenerRegistration?
     
+    let screenSize = UIScreen.main.bounds.size
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //xibファイルを使ってカスタムセルを使う処理
         tableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
         
         messageField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         
+        //キーボードを上げ下げする処理
+       NotificationCenter.default.addObserver(self, selector: #selector(Chat.keyboardWillShow(_ :)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(Chat.keyboardWillHide(_ :)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
     
@@ -95,6 +102,32 @@ class Chat: UIViewController,UITextFieldDelegate,UITableViewDelegate,UITableView
             cell.imageView?.image = UIImage(named: "panda")
         }
         return cell
+    }
+    
+    
+    //#selectorを使う時は@objcメソッドになる
+    @objc func keyboardWillShow(_ notification:NSNotification) {
+        let keyboradHeight = ((notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey]as Any)as AnyObject).cgRectValue?.height
+        
+        messageField.frame.origin.y = screenSize.height - keyboradHeight! - messageField.frame.height
+        
+        sendBtn.frame.origin.y = screenSize.height - keyboradHeight! - messageField.frame.height
+        
+    }
+    
+    @objc func keyboardWillHide(_ notification:NSNotification) {
+        
+        messageField.frame.origin.y = screenSize.height - messageField.frame.height
+        
+        sendBtn.frame.origin.y = screenSize.height - messageField.frame.height
+        
+        
+        guard let _ = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
+            let _ = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else {return}
+        
+        let transform = CGAffineTransform(translationX: 0, y: 0)
+        self.view.transform = transform
+        
     }
     
     

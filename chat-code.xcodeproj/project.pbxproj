@@ -168,12 +168,12 @@
 		58BF3D4523F1A12100A23D01 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				58E9033C23F2E8760058FBBC /* Message.swift */,
+				58E9033E23F2F5200058FBBC /* CollectionSafeAccess.swift */,
 				58BF3D4123F1A07100A23D01 /* Chat.swift */,
 				58BF3D4323F1A08700A23D01 /* Chat.storyboard */,
 				58E9033823F2E42D0058FBBC /* ChatTableViewCell.swift */,
 				58E9033923F2E42D0058FBBC /* ChatTableViewCell.xib */,
-				58E9033C23F2E8760058FBBC /* Message.swift */,
-				58E9033E23F2F5200058FBBC /* CollectionSafeAccess.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
