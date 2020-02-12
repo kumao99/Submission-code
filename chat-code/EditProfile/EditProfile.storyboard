@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1bh-6O-e87">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Profile-->
+        <scene sceneID="j4k-93-f3r">
+            <objects>
+                <viewController storyboardIdentifier="profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1bh-6O-e87" customClass="EditProfile" customModule="chat_code" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M8s-Kj-QvZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="editback" translatesAutoresizingMaskIntoConstraints="NO" id="6d7-Zh-rLL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR9-T2-cex">
+                                <rect key="frame" x="179.5" y="69" width="55" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pow-ia-vP2">
+                                <rect key="frame" x="157" y="113" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="W9Q-Bw-RYz"/>
+                                    <constraint firstAttribute="height" constant="100" id="rPN-md-rVn"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uR6-oo-GoC">
+                                <rect key="frame" x="50" y="263" width="314" height="506"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザーネームを入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ieh-nU-ooO" customClass="CustomTextField" customModule="chat_code" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="cu3-rS-kGp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="簡単な自己紹介を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aaV-sf-h21" customClass="CustomTextField" customModule="chat_code" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="67" width="314" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Jfi-x5-Rzr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="氏名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6nD-l6-Y70" customClass="CustomTextField" customModule="chat_code" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="193.5" width="314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7m8-4e-xuj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="フリガナ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NyI-JN-l1s" customClass="CustomTextField" customModule="chat_code" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="260.5" width="314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UBT-D3-ck0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレスを変更する" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="osr-O6-D5j" customClass="CustomTextField" customModule="chat_code" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="327.5" width="314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="zss-33-Zv7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワードを変更する" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBS-sc-uDd" customClass="CustomTextField" customModule="chat_code" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="394" width="314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="G9c-WQ-weF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOA-fn-TMX" customClass="BGButton" customModule="chat_code" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="461" width="314" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="LZa-e1-5gl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="変更を保存する">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" red="0.98411070580000004" green="1" blue="0.731023961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                                <point key="value" x="3" y="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                                <point key="value" x="0.0" y="-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="editFixBtn:" destination="1bh-6O-e87" eventType="touchUpInside" id="wf6-1Q-fvP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-JU-SXT">
+                                <rect key="frame" x="171" y="221" width="72" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="画像を変更する"/>
+                                <connections>
+                                    <action selector="imgBtn:" destination="1bh-6O-e87" eventType="touchUpInside" id="syd-2S-d8h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pow-ia-vP2" firstAttribute="top" secondItem="dR9-T2-cex" secondAttribute="bottom" constant="20" id="9eG-MV-p0u"/>
+                            <constraint firstItem="bsl-JU-SXT" firstAttribute="top" secondItem="pow-ia-vP2" secondAttribute="bottom" constant="8" id="BMv-7C-rfe"/>
+                            <constraint firstItem="bsl-JU-SXT" firstAttribute="centerX" secondItem="M8s-Kj-QvZ" secondAttribute="centerX" id="Mhb-jl-xGc"/>
+                            <constraint firstItem="0BJ-b9-dZ1" firstAttribute="trailing" secondItem="uR6-oo-GoC" secondAttribute="trailing" constant="50" id="MoE-DM-Ner"/>
+                            <constraint firstItem="uR6-oo-GoC" firstAttribute="leading" secondItem="0BJ-b9-dZ1" secondAttribute="leading" constant="50" id="YFk-5t-HwV"/>
+                            <constraint firstItem="0BJ-b9-dZ1" firstAttribute="bottom" secondItem="uR6-oo-GoC" secondAttribute="bottom" constant="93" id="Zfm-kL-vod"/>
+                            <constraint firstItem="pow-ia-vP2" firstAttribute="centerX" secondItem="M8s-Kj-QvZ" secondAttribute="centerX" id="bh1-eP-ThP"/>
+                            <constraint firstItem="dR9-T2-cex" firstAttribute="centerX" secondItem="M8s-Kj-QvZ" secondAttribute="centerX" id="l2H-5M-ZwF"/>
+                            <constraint firstItem="dR9-T2-cex" firstAttribute="top" secondItem="0BJ-b9-dZ1" secondAttribute="top" constant="25" id="sxO-6D-ZTS"/>
+                            <constraint firstItem="uR6-oo-GoC" firstAttribute="top" secondItem="pow-ia-vP2" secondAttribute="bottom" constant="50" id="tO5-QH-kEl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0BJ-b9-dZ1"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn" destination="rOA-fn-TMX" id="xkU-Qs-GpM"/>
+                        <outlet property="kanaField" destination="NyI-JN-l1s" id="6Ut-2o-NeT"/>
+                        <outlet property="mailField" destination="osr-O6-D5j" id="6GV-zZ-kea"/>
+                        <outlet property="nameField" destination="6nD-l6-Y70" id="SH1-V8-1Nb"/>
+                        <outlet property="passField" destination="MBS-sc-uDd" id="R87-P2-Vut"/>
+                        <outlet property="profileField" destination="aaV-sf-h21" id="JqV-u6-NKK"/>
+                        <outlet property="profileImg" destination="pow-ia-vP2" id="SlD-49-bjU"/>
+                        <outlet property="userNameField" destination="ieh-nU-ooO" id="2Pu-Ga-Bzv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Qh-87-8Y4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="editback" width="4288" height="2848"/>
+    </resources>
+</document>

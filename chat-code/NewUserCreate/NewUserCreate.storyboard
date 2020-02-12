@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NgD-X0-NHh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New User Create-->
+        <scene sceneID="sF1-KR-YsF">
+            <objects>
+                <viewController id="NgD-X0-NHh" customClass="NewUserCreate" customModule="chat_code" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tp0-Uk-kSH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morning" translatesAutoresizingMaskIntoConstraints="NO" id="BgW-Ck-adp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="i98-Gd-AWp">
+                                <rect key="frame" x="50" y="179.5" width="314" height="345"/>
+                                <subviews>
+                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　お名前" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="XC9-eY-LC9">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="eV9-qH-258"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　フリガナ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ilr-46-Ndi">
+                                        <rect key="frame" x="0.0" y="60" width="314" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="4JA-Cg-Xg3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　メールアドレス" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uE5-4y-Zha">
+                                        <rect key="frame" x="0.0" y="120" width="314" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="3Jk-kX-5ag"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　パスワード" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OfI-Bz-ag7">
+                                        <rect key="frame" x="0.0" y="180" width="314" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="t5k-JW-p7C"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　生年月日" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hee-gt-Hdo">
+                                        <rect key="frame" x="0.0" y="240" width="314" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="OVc-8Q-0ji"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　現住所" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h4V-wm-sdS">
+                                        <rect key="frame" x="0.0" y="300" width="314" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="9fA-nA-8cL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5S-Re-gfD">
+                                <rect key="frame" x="50" y="685.5" width="314" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.77461202009999996" blue="0.087380294780000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ib2-ll-2rl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerTapBtn:" destination="NgD-X0-NHh" eventType="touchUpInside" id="BOf-N8-cIT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fractal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdK-mU-8st">
+                                <rect key="frame" x="137.5" y="94" width="139" height="55.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IW-5h-Zhs">
+                                <rect key="frame" x="10" y="780.5" width="394" height="31.5"/>
+                                <string key="text">ご登録頂いた場合、利用規約・プライバシーポリシーの
+内容を理解し同意頂けたものとみなされます。</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登録する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWv-H8-u2s">
+                                <rect key="frame" x="168" y="696.5" width="78" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fWv-H8-u2s" firstAttribute="centerX" secondItem="tp0-Uk-kSH" secondAttribute="centerX" id="1kW-nU-NYm"/>
+                            <constraint firstItem="4IW-5h-Zhs" firstAttribute="leading" secondItem="fdg-TW-s0N" secondAttribute="leading" constant="10" id="3Bj-MG-seO"/>
+                            <constraint firstItem="4IW-5h-Zhs" firstAttribute="top" secondItem="fWv-H8-u2s" secondAttribute="bottom" constant="61" id="5Qv-Id-20q"/>
+                            <constraint firstItem="4IW-5h-Zhs" firstAttribute="top" secondItem="i5S-Re-gfD" secondAttribute="bottom" constant="50" id="9wv-kh-gd5"/>
+                            <constraint firstItem="mdK-mU-8st" firstAttribute="leading" secondItem="fdg-TW-s0N" secondAttribute="leading" constant="137.5" id="MDy-9M-Of6"/>
+                            <constraint firstItem="fdg-TW-s0N" firstAttribute="trailing" secondItem="4IW-5h-Zhs" secondAttribute="trailing" constant="10" id="Pf1-99-voA"/>
+                            <constraint firstItem="fdg-TW-s0N" firstAttribute="trailing" secondItem="i98-Gd-AWp" secondAttribute="trailing" constant="50" id="Rj6-Mz-ha2"/>
+                            <constraint firstItem="i98-Gd-AWp" firstAttribute="top" secondItem="mdK-mU-8st" secondAttribute="bottom" constant="30" id="TKV-Vb-xoa"/>
+                            <constraint firstItem="i98-Gd-AWp" firstAttribute="leading" secondItem="fdg-TW-s0N" secondAttribute="leading" constant="50" id="Zm6-rr-8pJ"/>
+                            <constraint firstItem="fdg-TW-s0N" firstAttribute="bottom" secondItem="4IW-5h-Zhs" secondAttribute="bottom" constant="50" id="aMa-4r-9DP"/>
+                            <constraint firstItem="i5S-Re-gfD" firstAttribute="leading" secondItem="fdg-TW-s0N" secondAttribute="leading" constant="50" id="e8O-fK-p33"/>
+                            <constraint firstItem="fdg-TW-s0N" firstAttribute="trailing" secondItem="mdK-mU-8st" secondAttribute="trailing" constant="137.5" id="hlx-N6-ohk"/>
+                            <constraint firstItem="fdg-TW-s0N" firstAttribute="trailing" secondItem="fWv-H8-u2s" secondAttribute="trailing" constant="168" id="kHu-Dy-E6D"/>
+                            <constraint firstItem="mdK-mU-8st" firstAttribute="centerX" secondItem="tp0-Uk-kSH" secondAttribute="centerX" id="kZg-uc-dHY"/>
+                            <constraint firstItem="i98-Gd-AWp" firstAttribute="centerX" secondItem="tp0-Uk-kSH" secondAttribute="centerX" id="otj-4q-l9Z"/>
+                            <constraint firstItem="mdK-mU-8st" firstAttribute="top" secondItem="fdg-TW-s0N" secondAttribute="top" constant="50" id="qLg-5Z-FKf"/>
+                            <constraint firstItem="4IW-5h-Zhs" firstAttribute="centerX" secondItem="tp0-Uk-kSH" secondAttribute="centerX" id="rJf-u3-3Ry"/>
+                            <constraint firstItem="fWv-H8-u2s" firstAttribute="leading" secondItem="fdg-TW-s0N" secondAttribute="leading" constant="168" id="tqS-a3-zcQ"/>
+                            <constraint firstItem="fdg-TW-s0N" firstAttribute="trailing" secondItem="i5S-Re-gfD" secondAttribute="trailing" constant="50" id="vuK-Vo-YK4"/>
+                            <constraint firstItem="i5S-Re-gfD" firstAttribute="centerX" secondItem="tp0-Uk-kSH" secondAttribute="centerX" id="xYz-ua-acT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fdg-TW-s0N"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressFiel" destination="h4V-wm-sdS" id="XMi-YA-lpw"/>
+                        <outlet property="birthField" destination="hee-gt-Hdo" id="c09-8E-HuK"/>
+                        <outlet property="kanaField" destination="Ilr-46-Ndi" id="Frs-yF-jNC"/>
+                        <outlet property="mailField" destination="uE5-4y-Zha" id="Rv6-dn-uRS"/>
+                        <outlet property="nameField" destination="XC9-eY-LC9" id="IJO-QJ-jc2"/>
+                        <outlet property="passField" destination="OfI-Bz-ag7" id="MdT-9Y-Drk"/>
+                        <outlet property="registerStackView" destination="i98-Gd-AWp" id="Hc3-Bp-aKi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="crW-H5-eMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108.69565217391305" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="morning" width="2900" height="3625"/>
+    </resources>
+</document>
