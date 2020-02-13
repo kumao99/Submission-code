@@ -97,12 +97,27 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Deo-Ta-LLN">
+                                <rect key="frame" x="110" y="510" width="195" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FnM-dg-SUS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="テスト用ボタン">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapTestBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wwN-zd-qfY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="lig-Vu-Ww1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="0HS-Ha-jie"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eLW-1J-W3i" secondAttribute="trailing" constant="50" id="1fy-3q-qJ1"/>
                             <constraint firstItem="REO-FO-36w" firstAttribute="top" secondItem="eLW-1J-W3i" secondAttribute="bottom" constant="15" id="5Zv-NQ-sz1"/>
+                            <constraint firstItem="UHv-OF-IQU" firstAttribute="top" secondItem="Deo-Ta-LLN" secondAttribute="bottom" constant="54" id="8AV-eT-JYh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o7C-dU-t6A" secondAttribute="trailing" constant="147" id="8Rq-9a-upl"/>
                             <constraint firstItem="gve-Bc-m9R" firstAttribute="top" secondItem="o7C-dU-t6A" secondAttribute="bottom" constant="26" id="8W6-qd-g5E"/>
                             <constraint firstItem="REO-FO-36w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="B6f-dJ-HVi"/>
@@ -111,6 +126,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="REO-FO-36w" secondAttribute="trailing" constant="78" id="GV7-hQ-F38"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lig-Vu-Ww1" secondAttribute="trailing" constant="50" id="GvU-i9-Dru"/>
                             <constraint firstItem="gve-Bc-m9R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="H5x-xz-fzg"/>
+                            <constraint firstItem="Deo-Ta-LLN" firstAttribute="top" secondItem="lig-Vu-Ww1" secondAttribute="bottom" constant="41" id="HHV-9m-qZX"/>
                             <constraint firstItem="Hod-DN-cLL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="LE0-vy-H4s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AT6-eA-Jlw" secondAttribute="trailing" constant="50" id="O0w-7F-9ga"/>
                             <constraint firstItem="CB2-q8-vZm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="OmA-vp-m2d"/>
@@ -119,10 +135,12 @@
                             <constraint firstItem="AT6-eA-Jlw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Vbv-xL-0wp"/>
                             <constraint firstItem="eLW-1J-W3i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="XMp-C7-t9V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="REO-FO-36w" secondAttribute="bottom" constant="30" id="aJv-B5-9d4"/>
+                            <constraint firstItem="Deo-Ta-LLN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="aRJ-IB-Y2c"/>
                             <constraint firstItem="o7C-dU-t6A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="cWL-YS-nHT"/>
                             <constraint firstItem="CB2-q8-vZm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eY7-63-u9P"/>
                             <constraint firstItem="eLW-1J-W3i" firstAttribute="top" secondItem="gve-Bc-m9R" secondAttribute="bottom" constant="51" id="gXG-t7-d26"/>
                             <constraint firstItem="gve-Bc-m9R" firstAttribute="top" secondItem="UHv-OF-IQU" secondAttribute="bottom" constant="15" id="jAt-JU-dDQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Deo-Ta-LLN" secondAttribute="trailing" constant="109" id="kd1-aa-0H2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gve-Bc-m9R" secondAttribute="trailing" constant="78" id="nBn-wh-74I"/>
                             <constraint firstItem="lig-Vu-Ww1" firstAttribute="top" secondItem="AT6-eA-Jlw" secondAttribute="bottom" constant="25" id="owB-az-hQi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hod-DN-cLL" secondAttribute="trailing" constant="147" id="uKt-y0-7l5"/>
@@ -135,6 +153,7 @@
                         <outlet property="mailField" destination="AT6-eA-Jlw" id="7nT-0a-zPB"/>
                         <outlet property="passField" destination="lig-Vu-Ww1" id="pwi-X2-ha4"/>
                         <outlet property="signInBtn" destination="eLW-1J-W3i" id="Ewe-wG-Qh4"/>
+                        <outlet property="testBtn" destination="Deo-Ta-LLN" id="2g8-30-Axg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

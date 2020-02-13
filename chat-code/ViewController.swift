@@ -17,6 +17,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var signInBtn: UIButton!
     
     
+    @IBOutlet weak var testBtn: UIButton!
+    
+    
     @IBOutlet weak var mailField: UITextField!
     @IBOutlet weak var passField: UITextField!
     
@@ -113,6 +116,13 @@ class ViewController: UIViewController,UITextFieldDelegate {
     func textFieldShouldReturn( _ textField : UITextField) -> Bool {
         textField.resignFirstResponder()
         
+    }
+    
+    
+    
+    @IBAction func tapTestBtn(_ sender: Any) {
+        let vc = TabPage.instantiate()
+        present(vc, animated: true)
     }
     
     
