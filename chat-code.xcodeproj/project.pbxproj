@@ -20,6 +20,7 @@
 		58258E3B23E5ADD4000D09BC /* BGcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58258E3A23E5ADD4000D09BC /* BGcolor.swift */; };
 		587D62C723EB09F700D41ABC /* TabPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D62C623EB09F700D41ABC /* TabPage.swift */; };
 		587D62D023EB139200D41ABC /* TabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587D62CF23EB139200D41ABC /* TabPage.storyboard */; };
+		58A7C27C23F5204C00689EEE /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7C27B23F5204C00689EEE /* TextFieldViewController.swift */; };
 		58B93F0F23E86CDE0062CEC1 /* NewUserCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B93F0E23E86CDE0062CEC1 /* NewUserCreate.swift */; };
 		58B93F1123E86CF80062CEC1 /* NewUserCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B93F1023E86CF80062CEC1 /* NewUserCreate.storyboard */; };
 		58BF3D4223F1A07100A23D01 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BF3D4123F1A07100A23D01 /* Chat.swift */; };
@@ -52,6 +53,7 @@
 		58258E3A23E5ADD4000D09BC /* BGcolor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGcolor.swift; sourceTree = "<group>"; };
 		587D62C623EB09F700D41ABC /* TabPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPage.swift; sourceTree = "<group>"; };
 		587D62CF23EB139200D41ABC /* TabPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabPage.storyboard; sourceTree = "<group>"; };
+		58A7C27B23F5204C00689EEE /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		58B93F0E23E86CDE0062CEC1 /* NewUserCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserCreate.swift; sourceTree = "<group>"; };
 		58B93F1023E86CF80062CEC1 /* NewUserCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUserCreate.storyboard; sourceTree = "<group>"; };
 		58BF3D4123F1A07100A23D01 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		58BF3D4523F1A12100A23D01 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				58A7C27B23F5204C00689EEE /* TextFieldViewController.swift */,
 				58E9033C23F2E8760058FBBC /* Message.swift */,
 				58E9033E23F2F5200058FBBC /* CollectionSafeAccess.swift */,
 				58BF3D4123F1A07100A23D01 /* Chat.swift */,
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58A7C27C23F5204C00689EEE /* TextFieldViewController.swift in Sources */,
 				587D62C723EB09F700D41ABC /* TabPage.swift in Sources */,
 				58258E3223E58989000D09BC /* UIStoryboard+Instantiation.swift in Sources */,
 				58E9033F23F2F5200058FBBC /* CollectionSafeAccess.swift in Sources */,

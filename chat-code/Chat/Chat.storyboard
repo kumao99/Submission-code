@@ -10,7 +10,7 @@
         <!--Chat-->
         <scene sceneID="3is-88-Q5Q">
             <objects>
-                <viewController id="cLr-ue-tgF" customClass="Chat" customModule="chat_code" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="cLr-ue-tgF" customClass="Chat" customModule="chat_code" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kV8-DO-HOo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

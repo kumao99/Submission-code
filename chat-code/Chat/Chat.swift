@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 
-class Chat: UIViewController,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource {
+class Chat: TextFieldViewController,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -20,29 +20,28 @@ class Chat: UIViewController,UITextFieldDelegate,UITableViewDelegate,UITableView
     private var messages: [Message.Data] = []
     private var messageListener: ListenerRegistration?
     
-    let screenSize = UIScreen.main.bounds.size
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         //xibファイルを使ってカスタムセルを使う処理
         tableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
         
-        messageField.delegate = self
+        self.messageField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         
-        //キーボードを上げ下げする処理
-       NotificationCenter.default.addObserver(self, selector: #selector(Chat.keyboardWillShow(_ :)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(Chat.keyboardWillHide(_ :)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
+      
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.setUpNotificationForTextField()
+        
         self.messageListener = Firestore.firestore().collection( "chat" ).order( by: "date" ).addSnapshotListener { snapshot, e in
             if let snapshot = snapshot {
                 
@@ -65,7 +64,7 @@ class Chat: UIViewController,UITextFieldDelegate,UITableViewDelegate,UITableView
         sendChatMessage(message: messageField.text ?? "")
     }
     
-    
+    //Firestoreにメッセージデータを送る
     private func sendChatMessage(message: String) {
         guard let id = UIDevice.current.identifierForVendor?.uuidString else { return }
         
@@ -105,35 +104,9 @@ class Chat: UIViewController,UITextFieldDelegate,UITableViewDelegate,UITableView
     }
     
     
-    //#selectorを使う時は@objcメソッドになる
-    @objc func keyboardWillShow(_ notification:NSNotification) {
-        let keyboradHeight = ((notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey]as Any)as AnyObject).cgRectValue?.height
-        
-        messageField.frame.origin.y = screenSize.height - keyboradHeight! - messageField.frame.height
-        
-        sendBtn.frame.origin.y = screenSize.height - keyboradHeight! - messageField.frame.height
-        
-    }
-    
-    @objc func keyboardWillHide(_ notification:NSNotification) {
-        
-        messageField.frame.origin.y = screenSize.height - messageField.frame.height
-        
-        sendBtn.frame.origin.y = screenSize.height - messageField.frame.height
-        
-        
-        guard let _ = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
-            let _ = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else {return}
-        
-        let transform = CGAffineTransform(translationX: 0, y: 0)
-        self.view.transform = transform
-        
-    }
-    
-    
-    func textFieldShouldReturn( _ textField : UITextField) -> Bool {
-        textField.resignFirstResponder()
-    }
+//    override func textFieldShouldReturn( _ textField : UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//    }
     
     
     
