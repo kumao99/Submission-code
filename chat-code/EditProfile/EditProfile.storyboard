@@ -11,7 +11,7 @@
         <!--Edit Profile-->
         <scene sceneID="j4k-93-f3r">
             <objects>
-                <viewController storyboardIdentifier="profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1bh-6O-e87" customClass="EditProfile" customModule="chat_code" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1bh-6O-e87" customClass="EditProfile" customModule="chat_code" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M8s-Kj-QvZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -46,6 +46,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         
     }
     
+    //ログイン
     @IBAction func loginBtn(_ sender: Any) {
         //        let vc = TabPage.instantiate()
         //        present(vc, animated: true)
@@ -69,7 +70,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
     
     
     
-    
+    //新規登録
     @IBAction func signBtn(_ sender: Any) {
         let vc = NewUserCreate.instantiate()
         present(vc, animated: true)

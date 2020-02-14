@@ -25,8 +25,12 @@ class EditProfile: UIViewController,UITextFieldDelegate,UIImagePickerControllerD
     @IBOutlet weak var btn: BGButton!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
         
 //        //ViewControllerのViewの初期設定
 //        self.view.backgroundColor = UIColor.white

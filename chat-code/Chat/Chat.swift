@@ -17,9 +17,16 @@ class Chat: TextFieldViewController,UITableViewDelegate,UITableViewDataSource,UI
     @IBOutlet weak var messageField: UITextField!
     @IBOutlet weak var sendBtn: UIButton!
     
+    
+    @IBOutlet weak var keyBtn: UIButton!
+    @IBOutlet weak var chatBtn: UIButton!
+    @IBOutlet weak var settingBtn: UIButton!
+    
+    
     private var messages: [Message.Data] = []
     private var messageListener: ListenerRegistration?
     
+   
 
     
     override func viewDidLoad() {
@@ -33,6 +40,7 @@ class Chat: TextFieldViewController,UITableViewDelegate,UITableViewDataSource,UI
         tableView.delegate = self
         tableView.dataSource = self
         
+        view.addSubview(tableView)
       
     }
     
@@ -107,6 +115,19 @@ class Chat: TextFieldViewController,UITableViewDelegate,UITableViewDataSource,UI
 //    override func textFieldShouldReturn( _ textField : UITextField) -> Bool {
 //        textField.resignFirstResponder()
 //    }
+    
+    
+    
+    @IBAction func chatPageBtn(_ sender: Any) {
+        let vc = Chat.instantiate()
+        present(vc, animated: true)
+    }
+    
+    
+    @IBAction func settingPageBtn(_ sender: Any) {
+        let vc = EditProfile.instantiate()
+        present(vc, animated: true)
+    }
     
     
     

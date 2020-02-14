@@ -15,9 +15,6 @@ class NewUserCreate: UIViewController,UITextFieldDelegate {
     
     
     
-    
-    
-    
     @IBOutlet weak var registerStackView: UIStackView!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var kanaField: UITextField!
@@ -144,15 +141,15 @@ class NewUserCreate: UIViewController,UITextFieldDelegate {
 }
 
 
-extension UIViewController{
-    func showerrorAlert(title: String, message: String){
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
-        
-    }
-    
-}
+//extension UIViewController{
+//    func showerrorAlert(title: String, message: String){
+//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//        let action = UIAlertAction(title: "OK", style: .default)
+//        alertController.addAction(action)
+//        present(alertController, animated: true, completion: nil)
+//
+//    }
+//
+//}
 
 

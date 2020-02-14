@@ -16,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="heb-pD-W0X">
-                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="672"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xzp-wf-AXc">
-                                <rect key="frame" x="20" y="808" width="260" height="35"/>
+                                <rect key="frame" x="20" y="749" width="260" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="5gb-Ya-EKe"/>
                                     <constraint firstAttribute="width" constant="260" id="Mjt-uB-T5s"/>
@@ -28,8 +28,45 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gc3-sJ-800">
+                                <rect key="frame" x="0.0" y="809" width="414" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="IEP-AK-72p"/>
+                                </constraints>
+                                <items/>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0E-PF-Nc9">
+                                <rect key="frame" x="314" y="827" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="1oc-53-Fs8"/>
+                                    <constraint firstAttribute="height" constant="40" id="xdh-vx-cQr"/>
+                                </constraints>
+                                <state key="normal" image="setting"/>
+                                <connections>
+                                    <action selector="settingPageBtn:" destination="cLr-ue-tgF" eventType="touchUpInside" id="4Ia-zE-YAS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqv-ch-Q6k">
+                                <rect key="frame" x="187" y="827" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Fky-wY-QDr"/>
+                                    <constraint firstAttribute="height" constant="40" id="eJg-wi-XK9"/>
+                                </constraints>
+                                <state key="normal" image="chat"/>
+                                <connections>
+                                    <action selector="chatPageBtn:" destination="cLr-ue-tgF" eventType="touchUpInside" id="Iq0-ZT-GN9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t60-sf-kBn">
+                                <rect key="frame" x="60" y="827" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="OaW-12-jx8"/>
+                                    <constraint firstAttribute="height" constant="40" id="mxG-jp-V6e"/>
+                                </constraints>
+                                <state key="normal" image="key"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqx-tE-kxz">
-                                <rect key="frame" x="310" y="810" width="73" height="30"/>
+                                <rect key="frame" x="323" y="751" width="31" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eeO-yR-Va9"/>
                                 </constraints>
@@ -41,22 +78,33 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xzp-wf-AXc" firstAttribute="leading" secondItem="TDj-tZ-7Sh" secondAttribute="leading" constant="20" id="5iY-77-Lcv"/>
-                            <constraint firstItem="TDj-tZ-7Sh" firstAttribute="bottom" secondItem="heb-pD-W0X" secondAttribute="bottom" constant="60" id="Cqp-If-efx"/>
-                            <constraint firstItem="TDj-tZ-7Sh" firstAttribute="trailing" secondItem="xqx-tE-kxz" secondAttribute="trailing" constant="31" id="SIZ-rW-Q3y"/>
+                            <constraint firstItem="Gc3-sJ-800" firstAttribute="bottom" secondItem="TDj-tZ-7Sh" secondAttribute="bottom" id="0hu-4q-47B"/>
+                            <constraint firstItem="TDj-tZ-7Sh" firstAttribute="trailing" secondItem="xqx-tE-kxz" secondAttribute="trailing" constant="60" id="9J8-Iz-0JR"/>
+                            <constraint firstItem="TDj-tZ-7Sh" firstAttribute="trailing" secondItem="p0E-PF-Nc9" secondAttribute="trailing" constant="60" id="DMi-fR-o8W"/>
+                            <constraint firstItem="t60-sf-kBn" firstAttribute="leading" secondItem="TDj-tZ-7Sh" secondAttribute="leading" constant="60" id="EDb-6X-E2k"/>
+                            <constraint firstItem="Rqv-ch-Q6k" firstAttribute="centerX" secondItem="kV8-DO-HOo" secondAttribute="centerX" id="MNG-SF-tuk"/>
+                            <constraint firstItem="Gc3-sJ-800" firstAttribute="top" secondItem="xqx-tE-kxz" secondAttribute="bottom" constant="28" id="S5e-Zj-pBB"/>
+                            <constraint firstItem="TDj-tZ-7Sh" firstAttribute="bottom" secondItem="t60-sf-kBn" secondAttribute="bottom" constant="-5" id="Tdk-Ry-77Y"/>
+                            <constraint firstItem="Gc3-sJ-800" firstAttribute="top" secondItem="xzp-wf-AXc" secondAttribute="bottom" constant="25" id="UaG-kv-ydb"/>
+                            <constraint firstItem="TDj-tZ-7Sh" firstAttribute="bottom" secondItem="Rqv-ch-Q6k" secondAttribute="bottom" constant="-5" id="Y21-IS-EOv"/>
+                            <constraint firstItem="xzp-wf-AXc" firstAttribute="top" secondItem="heb-pD-W0X" secondAttribute="bottom" constant="33" id="YnH-Zr-mlb"/>
                             <constraint firstItem="heb-pD-W0X" firstAttribute="top" secondItem="TDj-tZ-7Sh" secondAttribute="top" id="Yun-ZZ-Wv5"/>
                             <constraint firstItem="heb-pD-W0X" firstAttribute="leading" secondItem="TDj-tZ-7Sh" secondAttribute="leading" id="fZH-sp-JJ8"/>
-                            <constraint firstItem="xqx-tE-kxz" firstAttribute="leading" secondItem="xzp-wf-AXc" secondAttribute="trailing" constant="30" id="fxl-Ok-tDF"/>
+                            <constraint firstItem="Gc3-sJ-800" firstAttribute="leading" secondItem="TDj-tZ-7Sh" secondAttribute="leading" id="hlF-gh-zUi"/>
+                            <constraint firstItem="xzp-wf-AXc" firstAttribute="leading" secondItem="TDj-tZ-7Sh" secondAttribute="leading" constant="20" id="iQF-qf-VPA"/>
+                            <constraint firstItem="TDj-tZ-7Sh" firstAttribute="bottom" secondItem="p0E-PF-Nc9" secondAttribute="bottom" constant="-5" id="onr-p2-j66"/>
                             <constraint firstItem="heb-pD-W0X" firstAttribute="trailing" secondItem="TDj-tZ-7Sh" secondAttribute="trailing" id="pNh-yG-guq"/>
-                            <constraint firstItem="TDj-tZ-7Sh" firstAttribute="bottom" secondItem="xzp-wf-AXc" secondAttribute="bottom" constant="19" id="tPn-YD-Whr"/>
-                            <constraint firstItem="TDj-tZ-7Sh" firstAttribute="bottom" secondItem="xqx-tE-kxz" secondAttribute="bottom" constant="22" id="wgY-26-ZDd"/>
+                            <constraint firstItem="Gc3-sJ-800" firstAttribute="trailing" secondItem="TDj-tZ-7Sh" secondAttribute="trailing" id="xam-hf-Oq0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TDj-tZ-7Sh"/>
                     </view>
                     <navigationItem key="navigationItem" id="GMB-iF-dnA"/>
                     <connections>
+                        <outlet property="chatBtn" destination="Rqv-ch-Q6k" id="jYC-wP-Y1D"/>
+                        <outlet property="keyBtn" destination="t60-sf-kBn" id="pSM-JY-tMm"/>
                         <outlet property="messageField" destination="xzp-wf-AXc" id="Tvz-rS-3EC"/>
                         <outlet property="sendBtn" destination="xqx-tE-kxz" id="cSu-AF-MgN"/>
+                        <outlet property="settingBtn" destination="p0E-PF-Nc9" id="yQd-mm-Vhs"/>
                         <outlet property="tableView" destination="heb-pD-W0X" id="wSY-hA-wfo"/>
                     </connections>
                 </viewController>
@@ -65,4 +113,9 @@
             <point key="canvasLocation" x="918.84057971014499" y="201.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chat" width="512" height="512"/>
+        <image name="key" width="256" height="256"/>
+        <image name="setting" width="512" height="512"/>
+    </resources>
 </document>
