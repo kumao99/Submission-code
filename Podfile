@@ -6,9 +6,12 @@ target 'chat-code' do
   use_frameworks!
 
   # Pods for chat-code
-  pod 'MessageKit'
+  pod 'PKHUD'
   pod 'Firebase/Auth'
+  pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Storage'
+  pod 'FirebaseUI/Storage'
 
 end

@@ -20,8 +20,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem systemItem="favorites" id="vmA-7t-Fa7"/>
-                                    <tabBarItem systemItem="more" id="SLb-cU-Smy"/>
+                                    <tabBarItem title="chat" image="bubble.left" catalog="system" id="vmA-7t-Fa7"/>
+                                    <tabBarItem title="Item" id="e9j-7F-U3y"/>
+                                    <tabBarItem title="key" image="lock" catalog="system" id="SLb-cU-Smy"/>
                                 </items>
                             </tabBar>
                         </subviews>
@@ -34,4 +35,8 @@
             <point key="canvasLocation" x="-1197" y="-169"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bubble.left" catalog="system" width="64" height="54"/>
+        <image name="lock" catalog="system" width="64" height="64"/>
+    </resources>
 </document>
