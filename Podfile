@@ -13,5 +13,6 @@ target 'chat-code' do
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
+  pod 'IQKeyboardManagerSwift'
 
 end

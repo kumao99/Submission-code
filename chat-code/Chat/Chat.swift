@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 
-class Chat: TextFieldViewController,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate {
+class Chat: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -48,7 +48,7 @@ class Chat: TextFieldViewController,UITableViewDelegate,UITableViewDataSource,UI
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.setUpNotificationForTextField()
+//        self.setUpNotificationForTextField()
         
         self.messageListener = Firestore.firestore().collection( "chat" ).order( by: "date" ).addSnapshotListener { snapshot, e in
             if let snapshot = snapshot {
@@ -112,9 +112,9 @@ class Chat: TextFieldViewController,UITableViewDelegate,UITableViewDataSource,UI
     }
     
     
-//    override func textFieldShouldReturn( _ textField : UITextField) -> Bool {
-//        textField.resignFirstResponder()
-//    }
+     func textFieldShouldReturn( _ textField : UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
     
     
     
