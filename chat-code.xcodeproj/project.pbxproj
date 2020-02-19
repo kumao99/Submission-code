@@ -33,6 +33,7 @@
 		58E9033B23F2E42D0058FBBC /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E9033923F2E42D0058FBBC /* ChatTableViewCell.xib */; };
 		58E9033D23F2E8760058FBBC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E9033C23F2E8760058FBBC /* Message.swift */; };
 		58E9033F23F2F5200058FBBC /* CollectionSafeAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E9033E23F2F5200058FBBC /* CollectionSafeAccess.swift */; };
+		58EB96CA23FD650100DAB08C /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EB96C923FD650100DAB08C /* UserInfo.swift */; };
 		58FFE84423EFC93100B7F7B4 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FFE84323EFC93100B7F7B4 /* EditProfile.swift */; };
 		58FFE84623EFC94D00B7F7B4 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58FFE84523EFC94D00B7F7B4 /* EditProfile.storyboard */; };
 		58FFE84E23EFEA0100B7F7B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58FFE84D23EFEA0100B7F7B4 /* GoogleService-Info.plist */; };
@@ -69,6 +70,7 @@
 		58E9033923F2E42D0058FBBC /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		58E9033C23F2E8760058FBBC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		58E9033E23F2F5200058FBBC /* CollectionSafeAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSafeAccess.swift; sourceTree = "<group>"; };
+		58EB96C923FD650100DAB08C /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		58FFE84323EFC93100B7F7B4 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 		58FFE84523EFC94D00B7F7B4 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		58FFE84D23EFEA0100B7F7B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -117,10 +119,10 @@
 		58258E1B23E58785000D09BC /* chat-code */ = {
 			isa = PBXGroup;
 			children = (
-				586A51B323F67D46003D4F8F /* Extension */,
-				58258E3023E58955000D09BC /* Model */,
 				58258E1C23E58785000D09BC /* AppDelegate.swift */,
 				58258E1E23E58785000D09BC /* SceneDelegate.swift */,
+				586A51B323F67D46003D4F8F /* Extension */,
+				58258E3023E58955000D09BC /* Model */,
 				58258E2023E58785000D09BC /* ViewController.swift */,
 				58258E2223E58785000D09BC /* Main.storyboard */,
 				58B93F1223E86D570062CEC1 /* NewUserCreate */,
@@ -145,6 +147,7 @@
 				58258E3A23E5ADD4000D09BC /* BGcolor.swift */,
 				5808DB7023EBDCB40044B19D /* CustomText.swift */,
 				58E9033623F2D4AE0058FBBC /* FirestoreData.swift */,
+				58EB96C923FD650100DAB08C /* UserInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58EB96CA23FD650100DAB08C /* UserInfo.swift in Sources */,
 				58A7C27C23F5204C00689EEE /* TextFieldViewController.swift in Sources */,
 				587D62C723EB09F700D41ABC /* TabPage.swift in Sources */,
 				58258E3223E58989000D09BC /* UIStoryboard+Instantiation.swift in Sources */,

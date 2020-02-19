@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="i98-Gd-AWp">
-                                <rect key="frame" x="50" y="179.5" width="314" height="345"/>
+                                <rect key="frame" x="50" y="179.5" width="314" height="285"/>
                                 <subviews>
                                     <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　お名前" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="XC9-eY-LC9">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
@@ -38,7 +38,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　メールアドレス" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uE5-4y-Zha">
+                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　ユーザーネーム" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uE5-4y-Zha">
                                         <rect key="frame" x="0.0" y="120" width="314" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="3Jk-kX-5ag"/>
@@ -46,24 +46,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　パスワード" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OfI-Bz-ag7">
-                                        <rect key="frame" x="0.0" y="180" width="314" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="t5k-JW-p7C"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
                                     <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　生年月日" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hee-gt-Hdo">
-                                        <rect key="frame" x="0.0" y="240" width="314" height="45"/>
+                                        <rect key="frame" x="0.0" y="180" width="314" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="OVc-8Q-0ji"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　現住所" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h4V-wm-sdS">
-                                        <rect key="frame" x="0.0" y="300" width="314" height="45"/>
+                                    <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="　お住まいの都道府県" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h4V-wm-sdS">
+                                        <rect key="frame" x="0.0" y="240" width="314" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="9fA-nA-8cL"/>
                                         </constraints>
@@ -133,13 +125,13 @@
                         <viewLayoutGuide key="safeArea" id="fdg-TW-s0N"/>
                     </view>
                     <connections>
-                        <outlet property="addressFiel" destination="h4V-wm-sdS" id="XMi-YA-lpw"/>
+                        <outlet property="addressField" destination="h4V-wm-sdS" id="XMi-YA-lpw"/>
                         <outlet property="birthField" destination="hee-gt-Hdo" id="c09-8E-HuK"/>
                         <outlet property="kanaField" destination="Ilr-46-Ndi" id="Frs-yF-jNC"/>
-                        <outlet property="mailField" destination="uE5-4y-Zha" id="Rv6-dn-uRS"/>
                         <outlet property="nameField" destination="XC9-eY-LC9" id="IJO-QJ-jc2"/>
-                        <outlet property="passField" destination="OfI-Bz-ag7" id="MdT-9Y-Drk"/>
                         <outlet property="registerStackView" destination="i98-Gd-AWp" id="Hc3-Bp-aKi"/>
+                        <outlet property="tapBtn" destination="i5S-Re-gfD" id="zPh-rX-KUp"/>
+                        <outlet property="userNameField" destination="uE5-4y-Zha" id="Rv6-dn-uRS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crW-H5-eMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

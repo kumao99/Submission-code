@@ -7,7 +7,9 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class ViewController: UIViewController,UITextFieldDelegate {
     
@@ -16,8 +18,6 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var signInBtn: UIButton!
     
-    
-    @IBOutlet weak var testBtn: UIButton!
     
     
     @IBOutlet weak var mailField: UITextField!
@@ -41,15 +41,10 @@ class ViewController: UIViewController,UITextFieldDelegate {
         mailField.delegate = self
         passField.delegate = self
         
-        
-        
-        
     }
     
     //ログイン
     @IBAction func loginBtn(_ sender: Any) {
-        //        let vc = TabPage.instantiate()
-        //        present(vc, animated: true)
         
         guard let email = mailField.text,
             let password = passField.text else {return}
@@ -62,26 +57,35 @@ class ViewController: UIViewController,UITextFieldDelegate {
             return
         }
         
-        signIn(email: email, password: password)
-        
-        
-        
+        logIn(email: email, password: password)
     }
     
     
     
     //新規登録
     @IBAction func signBtn(_ sender: Any) {
-        let vc = NewUserCreate.instantiate()
-        present(vc, animated: true)
+        
+        guard let email = mailField.text, let password = passField.text else {
+            return
+        }
+        if email.isEmpty {
+            showerrorAlert(title:"入力エラー", message: "メールアドレスを入力してください")
+            return
+        }
+        if password.isEmpty {
+            showerrorAlert(title: "入力エラー", message: "パスワードを入力してください")
+            return
+        }
+        signIn(email: email, password: password)
     }
     
     
     
-    func signIn(email: String, password: String){
+    //FirebaseAuthのログイン
+    func logIn(email: String, password: String){
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if let error = error{
-                self.signInErrorAlert(error)
+                self.logInErrorAlert(error)
                 print("ログイン失敗")
             }else{
                 self.presentTabPage()
@@ -90,7 +94,23 @@ class ViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
-    func signInErrorAlert(_ error: Error){
+    //FirebaseAuthの新規登録
+    func signIn(email: String, password: String){
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if let error = error{
+                self.signInErrorAlert(error)
+                print("登録失敗")
+            }else{
+                self.presentNewUser()
+                print("登録成功")
+            }
+        }
+    }
+    
+    
+    
+    //ログイン時のエラーアラート
+    func logInErrorAlert(_ error: Error){
         if let errCode = AuthErrorCode(rawValue: error._code){
             var message = ""
             switch errCode {
@@ -105,9 +125,39 @@ class ViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
+    //新規登録の時のエラーアラート
+    func signInErrorAlert(_ error: Error){
+        if let errCode = AuthErrorCode(rawValue: error._code) {
+            var message = ""
+            switch errCode {
+            case .invalidEmail:
+                message = "有効なメールアドレスを入力してください"
+            case .emailAlreadyInUse:
+                message = "既に登録されているメールアドレスです"
+            case .weakPassword:
+                message = "パスワードは６文字以上で入力してください"
+            default:
+                message = "エラー: \(error.localizedDescription)"
+            }
+            showerrorAlert(title: message, message: message)
+        }
+    }
+    
+    
+    
     func presentTabPage() {
-        let storyBoard = UIStoryboard(name: "TabPage", bundle: nil)
-        guard let vc = storyBoard.instantiateInitialViewController() else {
+        let storyboard = UIStoryboard(name: "TabPage", bundle: nil)
+        guard let vc = storyboard.instantiateInitialViewController() else {
+            return
+        }
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    
+    func presentNewUser() {
+        let storyboard = UIStoryboard(name: "NewUserCreate", bundle: nil)
+        guard let vc = storyboard.instantiateInitialViewController() else {
             return
         }
         vc.modalPresentationStyle = .fullScreen
@@ -121,22 +171,6 @@ class ViewController: UIViewController,UITextFieldDelegate {
     
     
     
-    @IBAction func tapTestBtn(_ sender: Any) {
-        let vc = TabPage.instantiate()
-        present(vc, animated: true)
-    }
     
     
 }
-
-//extension UIViewController{
-//  func showerrorAlert(title: String, message: String){
-//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//      let action = UIAlertAction(title: "OK", style: .default)
-//      alertController.addAction(action)
-//      present(alertController, animated: true, completion: nil)
-//
-//    }
-
-
-

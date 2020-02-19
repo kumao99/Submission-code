@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Firebase
+import PKHUD
+import FirebaseFirestore
 
 class NewUserCreate: UIViewController,UITextFieldDelegate {
     
@@ -16,25 +17,31 @@ class NewUserCreate: UIViewController,UITextFieldDelegate {
     
     
     @IBOutlet weak var registerStackView: UIStackView!
+    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var kanaField: UITextField!
-    @IBOutlet weak var mailField: UITextField!
-    @IBOutlet weak var passField: UITextField!
+    @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var birthField: UITextField!
-    @IBOutlet weak var addressFiel: UITextField!
+    @IBOutlet weak var addressField: UITextField!
+    
+    @IBOutlet weak var tapBtn: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tapBtn.isEnabled = false
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didChangeNotification(notification:)), name: UITextField.textDidChangeNotification, object: nil)
+        
+        
+        
         //textFieldの設定
         nameField.delegate = self
         kanaField.delegate = self
-        mailField.delegate = self
-        passField.delegate = self
+        userNameField.delegate = self
         birthField.delegate = self
-        addressFiel.delegate = self
+        addressField.delegate = self
         
         //datePickerの設定
         datePicker.datePickerMode = UIDatePicker.Mode.date
@@ -72,18 +79,17 @@ class NewUserCreate: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func registerTapBtn(_ sender: Any) {
-        guard let email = mailField.text,
-            let password = passField.text else {return}
-        if email.isEmpty {
-            showerrorAlert(title: "入力エラー", message: "メールアドレスを入力してください")
-            return
-        }
-        if password.isEmpty{
-            showerrorAlert(title: "入力エラー", message: "パスワードを入力してください")
-            return
-        }
         
-        signUp(email: email, password: password)
+        print("登録ボタン押したよ")
+//        guard let title = nameField.text, let kana = kanaField.text, let _ = userNameField.text, let _ = birthField.text, let _ = addressField.text else {
+//                   return
+//               }
+//
+//        if title.isEmpty, kana.isEmpty {
+//                   HUD.flash(.labeledError(title: nil, subtitle: "お名前が入力されていません"), delay: 1)
+//
+//                   return
+//               }
         
         
         
@@ -91,49 +97,30 @@ class NewUserCreate: UIViewController,UITextFieldDelegate {
     
     
     
-    
-    func signUp(email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-            if let error = error{
-                self.signUpErrorAlert(error)
-                print("登録失敗")
-            }else{
-                self.presentProfilePage()
-                print("登録成功")
-            }
-        }
+    //未入力項目がある時はボタンを押せなくする
+   @objc func didChangeNotification(notification: Notification) {
+    tapBtn.isEnabled = nameField.text?.isEmpty == false && kanaField.text?.isEmpty == false && userNameField.text?.isEmpty == false && birthField.text?.isEmpty == false && addressField.text?.isEmpty == false
+    tapBtn.backgroundColor = UIColor.gray
     }
     
     
-    func signUpErrorAlert(_ error: Error){
-        if let errCode = AuthErrorCode(rawValue: error._code){
-            var message = ""
-            switch errCode {
-            case .invalidEmail:message = "有効なメールアドレスを入力してください"
-            case .emailAlreadyInUse:message = "既に登録されているメールアドレスです"
-            case .weakPassword:message = "パスワードは6文字以上で入力してください"
-            default:message = "エラー: \(error.localizedDescription)"
-                
-            }
-            showerrorAlert(title: message, message: message)
-        }
-    }
-    
+
+  
+    //storyboardを使ってTabPageに遷移
     func presentProfilePage() {
         
         let storyBoard = UIStoryboard(name: "TabPage", bundle: nil)
         guard let vc = storyBoard.instantiateInitialViewController() else {
-            print("viewControllerがないよ")
             return
         }
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
     
-    
+    //リターンキーでキーボード閉じる
     func textFieldShouldReturn( _ textField : UITextField) -> Bool {
         textField.resignFirstResponder()
-        
+
     }
     
     
@@ -141,15 +128,6 @@ class NewUserCreate: UIViewController,UITextFieldDelegate {
 }
 
 
-//extension UIViewController{
-//    func showerrorAlert(title: String, message: String){
-//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//        let action = UIAlertAction(title: "OK", style: .default)
-//        alertController.addAction(action)
-//        present(alertController, animated: true, completion: nil)
-//
-//    }
-//
-//}
+
 
 

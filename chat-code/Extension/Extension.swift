@@ -6,7 +6,6 @@
 //  Copyright © 2020 kumao. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 
@@ -22,3 +21,10 @@ extension UIViewController{
     
 }
 
+//リターンキーでキーボード閉じる
+//extension UITextFieldDelegate{
+//    func textFieldShouldReturn( _ textField : UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//
+//    }
+//}
