@@ -14,5 +14,6 @@ target 'chat-code' do
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
   pod 'IQKeyboardManagerSwift'
+  pod 'SendBirdSDK'
 
 end

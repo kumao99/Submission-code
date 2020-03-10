@@ -18,11 +18,11 @@
 		58258E3623E58CEF000D09BC /* FirstPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58258E3523E58CEF000D09BC /* FirstPage.storyboard */; };
 		58258E3823E58DF3000D09BC /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58258E3723E58DF3000D09BC /* FirstPage.swift */; };
 		58258E3B23E5ADD4000D09BC /* BGcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58258E3A23E5ADD4000D09BC /* BGcolor.swift */; };
-		586A51B023F65C7F003D4F8F /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586A51AF23F65C7F003D4F8F /* TabView.swift */; };
-		586A51B223F65C8D003D4F8F /* TabView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586A51B123F65C8D003D4F8F /* TabView.storyboard */; };
 		586A51B523F67D5C003D4F8F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586A51B423F67D5C003D4F8F /* Extension.swift */; };
 		587D62C723EB09F700D41ABC /* TabPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D62C623EB09F700D41ABC /* TabPage.swift */; };
 		587D62D023EB139200D41ABC /* TabPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587D62CF23EB139200D41ABC /* TabPage.storyboard */; };
+		58A6FCB9240E7E7E003E07BF /* SendBird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A6FCB8240E7E7E003E07BF /* SendBird.swift */; };
+		58A6FCBB240E7E95003E07BF /* SendBird.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A6FCBA240E7E95003E07BF /* SendBird.storyboard */; };
 		58A7C27C23F5204C00689EEE /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A7C27B23F5204C00689EEE /* TextFieldViewController.swift */; };
 		58B93F0F23E86CDE0062CEC1 /* NewUserCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B93F0E23E86CDE0062CEC1 /* NewUserCreate.swift */; };
 		58B93F1123E86CF80062CEC1 /* NewUserCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58B93F1023E86CF80062CEC1 /* NewUserCreate.storyboard */; };
@@ -55,11 +55,11 @@
 		58258E3523E58CEF000D09BC /* FirstPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstPage.storyboard; sourceTree = "<group>"; };
 		58258E3723E58DF3000D09BC /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
 		58258E3A23E5ADD4000D09BC /* BGcolor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGcolor.swift; sourceTree = "<group>"; };
-		586A51AF23F65C7F003D4F8F /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
-		586A51B123F65C8D003D4F8F /* TabView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabView.storyboard; sourceTree = "<group>"; };
 		586A51B423F67D5C003D4F8F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		587D62C623EB09F700D41ABC /* TabPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPage.swift; sourceTree = "<group>"; };
 		587D62CF23EB139200D41ABC /* TabPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabPage.storyboard; sourceTree = "<group>"; };
+		58A6FCB8240E7E7E003E07BF /* SendBird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendBird.swift; sourceTree = "<group>"; };
+		58A6FCBA240E7E95003E07BF /* SendBird.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendBird.storyboard; sourceTree = "<group>"; };
 		58A7C27B23F5204C00689EEE /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		58B93F0E23E86CDE0062CEC1 /* NewUserCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserCreate.swift; sourceTree = "<group>"; };
 		58B93F1023E86CF80062CEC1 /* NewUserCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUserCreate.storyboard; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 				58258E2A23E58788000D09BC /* Info.plist */,
 				58FFE84D23EFEA0100B7F7B4 /* GoogleService-Info.plist */,
 				58BF3D4523F1A12100A23D01 /* Chat */,
-				586A51AF23F65C7F003D4F8F /* TabView.swift */,
-				586A51B123F65C8D003D4F8F /* TabView.storyboard */,
+				58A6FCB8240E7E7E003E07BF /* SendBird.swift */,
+				58A6FCBA240E7E95003E07BF /* SendBird.storyboard */,
 			);
 			path = "chat-code";
 			sourceTree = "<group>";
@@ -279,12 +279,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58A6FCBB240E7E95003E07BF /* SendBird.storyboard in Resources */,
 				58BF3D4423F1A08700A23D01 /* Chat.storyboard in Resources */,
 				58B93F1123E86CF80062CEC1 /* NewUserCreate.storyboard in Resources */,
 				58258E3623E58CEF000D09BC /* FirstPage.storyboard in Resources */,
 				58258E2923E58788000D09BC /* LaunchScreen.storyboard in Resources */,
 				58258E2623E58788000D09BC /* Assets.xcassets in Resources */,
-				586A51B223F65C8D003D4F8F /* TabView.storyboard in Resources */,
 				587D62D023EB139200D41ABC /* TabPage.storyboard in Resources */,
 				58FFE84623EFC94D00B7F7B4 /* EditProfile.storyboard in Resources */,
 				58E9033B23F2E42D0058FBBC /* ChatTableViewCell.xib in Resources */,
@@ -347,6 +347,7 @@
 				587D62C723EB09F700D41ABC /* TabPage.swift in Sources */,
 				58258E3223E58989000D09BC /* UIStoryboard+Instantiation.swift in Sources */,
 				58E9033F23F2F5200058FBBC /* CollectionSafeAccess.swift in Sources */,
+				58A6FCB9240E7E7E003E07BF /* SendBird.swift in Sources */,
 				58258E3823E58DF3000D09BC /* FirstPage.swift in Sources */,
 				5808DB7123EBDCB40044B19D /* CustomText.swift in Sources */,
 				58B93F0F23E86CDE0062CEC1 /* NewUserCreate.swift in Sources */,
@@ -355,7 +356,6 @@
 				586A51B523F67D5C003D4F8F /* Extension.swift in Sources */,
 				58E9033723F2D4AE0058FBBC /* FirestoreData.swift in Sources */,
 				58258E1D23E58785000D09BC /* AppDelegate.swift in Sources */,
-				586A51B023F65C7F003D4F8F /* TabView.swift in Sources */,
 				58258E3B23E5ADD4000D09BC /* BGcolor.swift in Sources */,
 				58258E1F23E58785000D09BC /* SceneDelegate.swift in Sources */,
 				58E9033A23F2E42D0058FBBC /* ChatTableViewCell.swift in Sources */,

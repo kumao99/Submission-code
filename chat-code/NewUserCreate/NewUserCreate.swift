@@ -31,9 +31,9 @@ class NewUserCreate: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tapBtn.isEnabled = false
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didChangeNotification(notification:)), name: UITextField.textDidChangeNotification, object: nil)
-        
+//        tapBtn.isEnabled = false
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.didChangeNotification(notification:)), name: UITextField.textDidChangeNotification, object: nil)
+//
         
         
         //textFieldの設定
@@ -81,15 +81,17 @@ class NewUserCreate: UIViewController,UITextFieldDelegate {
     @IBAction func registerTapBtn(_ sender: Any) {
         
         print("登録ボタン押したよ")
-//        guard let title = nameField.text, let kana = kanaField.text, let _ = userNameField.text, let _ = birthField.text, let _ = addressField.text else {
-//                   return
-//               }
-//
-//        if title.isEmpty, kana.isEmpty {
-//                   HUD.flash(.labeledError(title: nil, subtitle: "お名前が入力されていません"), delay: 1)
-//
-//                   return
-//               }
+        guard let title = nameField.text, let kana = kanaField.text, let userName = userNameField.text, let birth = birthField.text, let add = addressField.text else {
+                   return
+               }
+
+        if title.isEmpty || kana.isEmpty || userName.isEmpty || birth.isEmpty || add.isEmpty {
+                   HUD.flash(.labeledError(title: nil, subtitle: "お名前が入力されていません"), delay: 1)
+
+                   return
+        } else {
+            print("登録できましたよ")
+        }
         
         
         
@@ -98,11 +100,11 @@ class NewUserCreate: UIViewController,UITextFieldDelegate {
     
     
     //未入力項目がある時はボタンを押せなくする
-   @objc func didChangeNotification(notification: Notification) {
-    tapBtn.isEnabled = nameField.text?.isEmpty == false && kanaField.text?.isEmpty == false && userNameField.text?.isEmpty == false && birthField.text?.isEmpty == false && addressField.text?.isEmpty == false
-    tapBtn.backgroundColor = UIColor.gray
-    }
-    
+//   @objc func didChangeNotification(notification: Notification) {
+//    tapBtn.isEnabled = nameField.text?.isEmpty == false && kanaField.text?.isEmpty == false && userNameField.text?.isEmpty == false && birthField.text?.isEmpty == false && addressField.text?.isEmpty == false
+//    tapBtn.backgroundColor = UIColor.gray
+//    }
+//
     
 
   

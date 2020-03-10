@@ -1,19 +1,20 @@
 //
-//  TabView.swift
+//  SendBird.swift
 //  chat-code
 //
-//  Created by kumao on 2020/02/14.
+//  Created by kumao on 2020/03/03.
 //  Copyright © 2020 kumao. All rights reserved.
 //
 
 import UIKit
+import SendBirdSDK
 
-class TabView: UIViewController {
+class SendBird: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      
+        
     }
     
 
